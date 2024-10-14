@@ -35,8 +35,8 @@ public class AppTest extends TestCase {
     @Override
     protected void setUp() throws Exception {
         // Set up ChromeDriver path
-        System.setProperty("webdriver.chrome.driver", "src/chromedriver");
-        driver = new ChromeDriver();
+         System.setProperty("webdriver.chrome.driver", "C:/ProgramData/Jenkins/.jenkins/workspace/SeleniumTest1/src/chromedriver.exe");
+         driver = new ChromeDriver();
     }
 
     /**
