@@ -63,10 +63,10 @@ public class AppTest extends TestCase {
      */
     public void testPageTitle() {
         // Navigate to a simple webpage
-        driver.get("https://example.com");
+        driver.get("https://krishnas-77.github.io/Exp05/home.html");
 
         // Verify the title of the page
-        String expectedTitle = "Example Domain";
+        String expectedTitle = "Urban Cart";
         assertEquals(expectedTitle, driver.getTitle());
     }
 
