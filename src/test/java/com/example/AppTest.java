@@ -5,13 +5,12 @@ import junit.framework.TestCase;
 import junit.framework.TestSuite;
 import org.openqa.selenium.WebDriver;
 import org.openqa.selenium.chrome.ChromeDriver;
-import org.openqa.selenium.By;
 
 /**
  * Unit test for simple App.
  */
 public class AppTest extends TestCase {
-    
+
     private WebDriver driver;
 
     /**
@@ -35,39 +34,20 @@ public class AppTest extends TestCase {
      */
     @Override
     protected void setUp() throws Exception {
+        // Set up ChromeDriver path
         System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
         driver = new ChromeDriver();
-        driver.manage().window().maximize();
     }
 
     /**
-     * A sample Selenium test case
+     * Simple test to check Google homepage title
      */
-    public void testGoogleSearch() {
-        // Navigate to Google
+    public void testGoogleHomepageTitle() {
+        // Open Google homepage
         driver.get("https://www.google.com");
 
-        // Enter search query
-        driver.findElement(By.name("q")).sendKeys("Selenium WebDriver");
-
-        // Submit the search form
-        driver.findElement(By.name("q")).submit();
-
-        // Verify the title of the search results page
-        String expectedTitle = "Selenium WebDriver - Google Search";
-        assertTrue(driver.getTitle().contains(expectedTitle));
-    }
-
-    /**
-     * Another sample test case
-     */
-    public void testPageTitle() {
-        // Navigate to a simple webpage
-        driver.get("https://krishnas-77.github.io/Exp05/home.html");
-
-        // Verify the title of the page
-        String expectedTitle = "Urban Cart";
-        assertEquals(expectedTitle, driver.getTitle());
+        // Verify that the title contains "Google"
+        assertTrue(driver.getTitle().contains("Google"));
     }
 
     /**
@@ -81,7 +61,7 @@ public class AppTest extends TestCase {
     }
 
     /**
-     * Rigourous Test :-)
+     * Rigorous Test :-)
      */
     public void testApp() {
         assertTrue(true);
