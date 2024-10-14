@@ -35,7 +35,7 @@ public class AppTest extends TestCase {
     @Override
     protected void setUp() throws Exception {
         // Set up ChromeDriver path
-        System.setProperty("webdriver.chrome.driver", "path/to/chromedriver");
+        System.setProperty("webdriver.chrome.driver", "src/chromedriver");
         driver = new ChromeDriver();
     }
 
